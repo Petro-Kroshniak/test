@@ -6,9 +6,9 @@ on:
 
 env:
   AWS_REGION: "us-east-1"
-  ECR_REPOSITORY: "hello_world"
+  ECR_REPOSITORY: "hello-world"
   ECS_SERVICE: "fargate-servise"
-  ECS_CLUSTER: "Test_cluster"
+  ECS_CLUSTER: "test_cluster"
   ECS_TASK_DEFINITION: "./sample-revision1.json"
   CONTAINER_NAME: "container_app"
 
