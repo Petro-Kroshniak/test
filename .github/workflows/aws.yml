@@ -10,7 +10,7 @@ env:
   ECS_SERVICE: "fargate-servise"
   ECS_CLUSTER: "test_cluster"
   ECS_TASK_DEFINITION: "./sample.json"
-  CONTAINER_NAME: "container_app"
+  CONTAINER_NAME: "conteiner_app"
 
 permissions:
   contents: read
