@@ -9,7 +9,7 @@ env:
   ECR_REPOSITORY: "hello-world"
   ECS_SERVICE: "fargate-servise"
   ECS_CLUSTER: "test_cluster"
-  ECS_TASK_DEFINITION: "./sample-revision1.json"
+  ECS_TASK_DEFINITION: "./sample.json"
   CONTAINER_NAME: "container_app"
 
 permissions:
