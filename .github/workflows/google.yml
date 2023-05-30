@@ -20,7 +20,7 @@ env:
   PROJECT_ID: balmy-cab-387209
   GAR_LOCATION: us-central1 # TODO: update region of the Artifact Registry
   GKE_CLUSTER: test-cluster    # TODO: update to cluster name
-  GKE_ZONE: us-central1-c   # TODO: update to cluster zone
+  GKE_ZONE: us-central1   # TODO: update to cluster zone
   DEPLOYMENT_NAME: gke-test # TODO: update to deployment name
   REPOSITORY: test-git-actions # TODO: update to Artifact Registry docker repository
   IMAGE: static-site
