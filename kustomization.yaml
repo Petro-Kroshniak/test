@@ -1,0 +1,41 @@
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "gke-test"
+  namespace: "default"
+  labels:
+    app: "gke-test"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: "gke-test"
+  template:
+    metadata:
+      labels:
+        app: "gke-test"
+    spec:
+      containers:
+      - name: "static-site-sha256-1"
+        image: "us-central1-docker.pkg.dev/balmy-cab-387209/test-git-actions/static-site@sha256:c6797bba4f44da243e71b65afb6dadadf41372b85117926605f52a7285cc6d3b"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "gke-test-hpa-zno7"
+  namespace: "default"
+  labels:
+    app: "gke-test"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "gke-test"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 1
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      targetAverageUtilization: 80
