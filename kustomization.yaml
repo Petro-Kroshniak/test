@@ -3,8 +3,3 @@ kind: Kustomization
 resources:
   - deployment.yaml
   - service.yaml
-spec:
-  template:
-    spec:
-      containers:
-        - image: us-central1-docker.pkg.dev/balmy-cab-387209/test-git-actions/static-site@sha256:c6797bba4f44da243e71b65afb6dadadf41372b85117926605f52a7285cc6d3b
